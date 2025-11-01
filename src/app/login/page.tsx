@@ -43,6 +43,7 @@ export default function LoginPage() {
           src="/login-photo.jpeg"
           alt="Welcome to Next Auth"
           fill
+          sizes="50vw"
           className="object-cover"
           priority
         />
