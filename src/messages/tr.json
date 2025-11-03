@@ -1,0 +1,21 @@
+{
+  "navbar": {
+    "appTitle": "Next Auth",
+    "signIn": "Giriş Yap",
+    "language": "Dil",
+    "turkish": "Türkçe",
+    "english": "English"
+  },
+  "userMenu": {
+    "signOut": "Çıkış Yap"
+  },
+  "loginPage": {
+    "title": "Hesabınıza giriş yapın",
+    "signInWithAuth0": "Auth0 ile giriş yap",
+    "termsAgreement": "Devam ederek <termsLink>Hizmet Şartlarımızı</termsLink> ve <privacyLink>Gizlilik Politikamızı</privacyLink> kabul etmiş olursunuz",
+    "imageAlt": "Next Auth'a Hoş Geldiniz"
+  },
+  "homePage": {
+    "welcome": "Next Auth'a Hoş Geldiniz"
+  }
+}

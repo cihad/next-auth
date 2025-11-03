@@ -20,6 +20,15 @@ jest.mock("next/link", () => {
   return MockLink;
 });
 
+// Mock LanguageSwitcher component
+jest.mock("@/components/app/language-switcher", () => {
+  const MockLanguageSwitcher = () => (
+    <div data-testid="language-switcher">Language Switcher</div>
+  );
+  MockLanguageSwitcher.displayName = "MockLanguageSwitcher";
+  return MockLanguageSwitcher;
+});
+
 describe("Navbar Component", () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -59,7 +68,7 @@ describe("Navbar Component", () => {
     expect(screen.getByText("T")).toBeInTheDocument();
   });
 
-  it("should render Next Auth title with link to home", async () => {
+  it("should render app title with link to home", async () => {
     (auth as jest.Mock).mockResolvedValue(null);
 
     const NavbarComponent = await Navbar();
@@ -68,5 +77,28 @@ describe("Navbar Component", () => {
     const homeLink = screen.getByRole("link", { name: /next auth/i });
     expect(homeLink).toBeInTheDocument();
     expect(homeLink).toHaveAttribute("href", "/");
+  });
+
+  it("should render language switcher", async () => {
+    (auth as jest.Mock).mockResolvedValue(null);
+
+    const NavbarComponent = await Navbar();
+    render(NavbarComponent);
+
+    expect(screen.getByTestId("language-switcher")).toBeInTheDocument();
+  });
+
+  it("should render all components in correct order", async () => {
+    (auth as jest.Mock).mockResolvedValue(null);
+
+    const NavbarComponent = await Navbar();
+    const { container } = render(NavbarComponent);
+
+    const nav = container.querySelector("nav");
+    expect(nav).toBeInTheDocument();
+
+    // Check language switcher and sign in button are in the same container
+    const rightSection = screen.getByTestId("language-switcher").parentElement;
+    expect(rightSection).toContainElement(screen.getByText("Sign in"));
   });
 });

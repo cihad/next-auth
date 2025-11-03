@@ -3,14 +3,17 @@ import Link from "next/link";
 import Image from "next/image";
 import Auth0Logo from "@/components/app/auth0-logo";
 import { signIn } from "@/lib/auth";
+import { getTranslations } from "next-intl/server";
 
-export default function LoginPage() {
+export default async function LoginPage() {
+  const t = await getTranslations("loginPage");
+
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
       <div className="flex items-center justify-center p-8 bg-white dark:bg-gray-950">
         <div className="w-full max-w-md space-y-8">
           <Link href="/" className="inline-block">
-            <h1 className="text-3xl font-bold">Sign in to your account</h1>
+            <h1 className="text-3xl font-bold">{t("title")}</h1>
           </Link>
 
           <form
@@ -21,19 +24,23 @@ export default function LoginPage() {
           >
             <Button type="submit">
               <Auth0Logo />
-              Sign in with Auth0
+              {t("signInWithAuth0")}
             </Button>
           </form>
 
           <div className="text-sm text-muted-foreground">
-            By continuing, you agree to our{" "}
-            <a href="#" className="underline hover:text-foreground">
-              Terms of Service
-            </a>{" "}
-            and{" "}
-            <a href="#" className="underline hover:text-foreground">
-              Privacy Policy
-            </a>
+            {t.rich("termsAgreement", {
+              termsLink: (chunks) => (
+                <a href="#" className="underline hover:text-foreground">
+                  {chunks}
+                </a>
+              ),
+              privacyLink: (chunks) => (
+                <a href="#" className="underline hover:text-foreground">
+                  {chunks}
+                </a>
+              ),
+            })}
           </div>
         </div>
       </div>
@@ -41,7 +48,7 @@ export default function LoginPage() {
       <div className="hidden lg:block relative overflow-hidden">
         <Image
           src="/login-photo.jpeg"
-          alt="Welcome to Next Auth"
+          alt={t("imageAlt")}
           fill
           sizes="50vw"
           className="object-cover"

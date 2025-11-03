@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import UserMenu from "./user-menu";
+import LanguageSwitcher from "./language-switcher";
 import { auth } from "@/lib/auth";
+import { getTranslations } from "next-intl/server";
 
 export async function Navbar() {
   const session = await auth();
+  const t = await getTranslations("navbar");
 
   return (
     <nav className="border-b bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
@@ -12,17 +15,18 @@ export async function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/">
-              <h1 className="text-xl font-bold">Next Auth</h1>
+              <h1 className="text-xl font-bold">{t("appTitle")}</h1>
             </Link>
           </div>
 
           <div className="flex items-center gap-4">
+            <LanguageSwitcher />
             {session ? (
               <UserMenu user={session.user} />
             ) : (
               <>
                 <Button asChild>
-                  <Link href="/login">Sign in</Link>
+                  <Link href="/login">{t("signIn")}</Link>
                 </Button>
               </>
             )}
