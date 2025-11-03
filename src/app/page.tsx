@@ -1,21 +1,44 @@
 import { Navbar } from "@/components/app/navbar";
+import { ProductCard } from "@/components/app/product-card";
+import { Product } from "@/types/product";
 import { getTranslations } from "next-intl/server";
+
+async function getFeaturedProducts(): Promise<Product[]> {
+  try {
+    const response = await fetch("https://fakestoreapi.com/products?limit=4", {
+      next: { revalidate: 3600 }, // Cache for 1 hour
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch products");
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    return [];
+  }
+}
 
 export default async function Home() {
   const t = await getTranslations("homePage");
+  const products = await getFeaturedProducts();
 
   return (
     <>
       <Navbar />
-      <div className="min-h-screen">
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center space-y-8">
-            <h2 className="text-4xl font-bold tracking-tight">
-              {t("welcome")}
-            </h2>
-          </div>
-        </main>
-      </div>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {products.length > 0 && (
+          <section>
+            <h2 className="text-2xl mb-8">{t("featuredProducts")}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </section>
+        )}
+      </main>
     </>
   );
 }

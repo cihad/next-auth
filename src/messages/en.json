@@ -16,6 +16,8 @@
     "imageAlt": "Welcome to Next Auth"
   },
   "homePage": {
-    "welcome": "Welcome to Next Auth"
+    "featuredProducts": "Featured Products",
+    "addToCart": "Add to Cart",
+    "addToCartTooltip": "Add to cart"
   }
 }

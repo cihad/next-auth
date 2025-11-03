@@ -16,6 +16,8 @@
     "imageAlt": "Next Auth'a Hoş Geldiniz"
   },
   "homePage": {
-    "welcome": "Next Auth'a Hoş Geldiniz"
+    "featuredProducts": "Öne Çıkan Ürünler",
+    "addToCart": "Sepete Ekle",
+    "addToCartTooltip": "Sepete ekle"
   }
 }
