@@ -37,5 +37,14 @@
     "showingProducts": "{count} ürün gösteriliyor",
     "applyFilters": "Filtreleri Uygula",
     "clearFilters": "Filtreleri Temizle"
+  },
+  "productDetailPage": {
+    "price": "Fiyat",
+    "category": "Kategori",
+    "description": "Açıklama",
+    "addToCart": "Sepete Ekle",
+    "backToProducts": "Ürünlere Dön",
+    "productNotFound": "Ürün bulunamadı",
+    "reviews": "değerlendirme"
   }
 }

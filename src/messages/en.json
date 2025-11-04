@@ -37,5 +37,14 @@
     "showingProducts": "Showing {count} products",
     "applyFilters": "Apply Filters",
     "clearFilters": "Clear Filters"
+  },
+  "productDetailPage": {
+    "price": "Price",
+    "category": "Category",
+    "description": "Description",
+    "addToCart": "Add to Cart",
+    "backToProducts": "Back to Products",
+    "productNotFound": "Product not found",
+    "reviews": "reviews"
   }
 }

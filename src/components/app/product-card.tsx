@@ -3,6 +3,8 @@ import { Product } from "@/types/product";
 import { ShoppingCartIcon } from "lucide-react";
 import AppButton from "./app-button";
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { formatPrice } from "@/lib/utils";
 
 interface ProductCardProps {
   product: Product;
@@ -12,7 +14,10 @@ export async function ProductCard({ product }: ProductCardProps) {
   const t = await getTranslations("homePage");
 
   return (
-    <div className="border rounded-lg overflow-hidden">
+    <Link
+      href={`/products/${product.id}`}
+      className="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow block"
+    >
       <div className="relative w-full h-64 bg-gray-100">
         <Image
           src={product.image}
@@ -24,7 +29,9 @@ export async function ProductCard({ product }: ProductCardProps) {
       <div className="p-4 space-y-3">
         <h3 className="line-clamp-2 font-medium min-h-14">{product.title}</h3>
         <div className="flex items-center justify-between gap-4">
-          <p className="font-medium text-primary">${product.price}</p>
+          <p className="font-medium text-primary">
+            {formatPrice(product.price)}
+          </p>
           <AppButton
             size="icon"
             variant="outline"
@@ -34,6 +41,6 @@ export async function ProductCard({ product }: ProductCardProps) {
           </AppButton>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

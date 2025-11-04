@@ -71,7 +71,8 @@ describe("ProductCard Component", () => {
     const ProductCardComponent = await ProductCard({ product: mockProduct });
     render(ProductCardComponent);
 
-    expect(screen.getByText("$29.99")).toBeInTheDocument();
+    // Price is formatted with formatPrice helper (no decimals)
+    expect(screen.getByText("$30")).toBeInTheDocument();
   });
 
   it("should render add to cart button with tooltip", async () => {
