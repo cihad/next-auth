@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import ProductDetailPage, {
   generateStaticParams,
+  generateMetadata,
 } from "@/app/products/[id]/page";
 import { NextIntlClientProvider } from "next-intl";
 import { Product } from "@/types/product";
@@ -96,7 +97,14 @@ describe("ProductDetailPage", () => {
 
     expect(screen.getByTestId("navbar")).toBeInTheDocument();
     expect(screen.getByText("Test Product")).toBeInTheDocument();
-    expect(screen.getByText("Category: electronics")).toBeInTheDocument();
+    expect(screen.getByText("electronics")).toBeInTheDocument();
+
+    // Check if category is a link to products page with filter
+    const categoryLink = screen.getByText("electronics").closest("a");
+    expect(categoryLink).toHaveAttribute(
+      "href",
+      "/products?categories=electronics"
+    );
     expect(screen.getByText("$100")).toBeInTheDocument();
     expect(
       screen.getByText("This is a test product description")
@@ -246,5 +254,53 @@ describe("generateStaticParams", () => {
     const params = await generateStaticParams();
 
     expect(params).toEqual([]);
+  });
+});
+
+describe("generateMetadata", () => {
+  it("generates metadata for a product", async () => {
+    const mockProduct = {
+      id: 1,
+      title: "Test Product",
+      description: "Test Description",
+      price: 19.99,
+      category: "electronics",
+      image: "https://example.com/image.jpg",
+      rating: { rate: 4.5, count: 100 },
+    };
+
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: true,
+      json: async () => mockProduct,
+    });
+
+    const metadata = await generateMetadata({
+      params: Promise.resolve({ id: "1" }),
+    });
+
+    expect(metadata.title).toBe("Test Product | Next Auth Store");
+    expect(metadata.description).toBe("Test Description");
+    expect(metadata.openGraph?.title).toBe("Test Product");
+    expect(metadata.openGraph?.description).toBe("Test Description");
+    expect(metadata.openGraph?.images).toEqual([
+      {
+        url: "https://example.com/image.jpg",
+        width: 800,
+        height: 800,
+        alt: "Test Product",
+      },
+    ]);
+  });
+
+  it("returns fallback metadata when product not found", async () => {
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: false,
+    });
+
+    const metadata = await generateMetadata({
+      params: Promise.resolve({ id: "999" }),
+    });
+
+    expect(metadata.title).toBe("Product Not Found");
   });
 });

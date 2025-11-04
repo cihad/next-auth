@@ -8,6 +8,7 @@ import AppButton from "@/components/app/app-button";
 import Link from "next/link";
 import { formatPrice } from "@/lib/utils";
 import { Rating } from "@/components/ui/rating";
+import type { Metadata } from "next";
 
 async function getProduct(id: string): Promise<Product | null> {
   try {
@@ -57,6 +58,37 @@ interface ProductDetailPageProps {
   }>;
 }
 
+export async function generateMetadata({
+  params,
+}: ProductDetailPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const product = await getProduct(id);
+
+  if (!product) {
+    return {
+      title: "Product Not Found",
+    };
+  }
+
+  return {
+    title: `${product.title} | Next Auth Store`,
+    description: product.description,
+    openGraph: {
+      title: product.title,
+      description: product.description,
+      images: [
+        {
+          url: product.image,
+          width: 800,
+          height: 800,
+          alt: product.title,
+        },
+      ],
+      type: "website",
+    },
+  };
+}
+
 export default async function ProductDetailPage({
   params,
 }: ProductDetailPageProps) {
@@ -96,9 +128,12 @@ export default async function ProductDetailPage({
           <div className="space-y-6">
             <div>
               <h1 className="text-3xl font-bold mb-2">{product.title}</h1>
-              <p className="text-sm text-muted-foreground capitalize">
-                {t("category")}: {product.category}
-              </p>
+              <Link
+                href={`/products?categories=${product.category}`}
+                className="text-sm text-muted-foreground capitalize hover:text-foreground transition-colors"
+              >
+                {product.category}
+              </Link>
             </div>
 
             {/* Rating */}
@@ -116,15 +151,15 @@ export default async function ProductDetailPage({
               </p>
             </div>
 
+            <AppButton size="lg" className="w-full">
+              <ShoppingCartIcon className="mr-2" />
+              {t("addToCart")}
+            </AppButton>
+
             <div>
               <h2 className="text-lg font-semibold mb-3">{t("description")}</h2>
               <p className="leading-relaxed">{product.description}</p>
             </div>
-
-            <AppButton size="lg" className="w-full md:w-auto">
-              <ShoppingCartIcon className="mr-2" />
-              {t("addToCart")}
-            </AppButton>
           </div>
         </div>
       </main>
