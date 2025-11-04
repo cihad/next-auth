@@ -4,7 +4,9 @@
     "signIn": "Giriş Yap",
     "language": "Dil",
     "turkish": "Türkçe",
-    "english": "English"
+    "english": "English",
+    "home": "Anasayfa",
+    "products": "Ürünler"
   },
   "userMenu": {
     "signOut": "Çıkış Yap"
@@ -19,5 +21,21 @@
     "featuredProducts": "Öne Çıkan Ürünler",
     "addToCart": "Sepete Ekle",
     "addToCartTooltip": "Sepete ekle"
+  },
+  "productsPage": {
+    "title": "Tüm Ürünler",
+    "filters": "Filtreler",
+    "priceRange": "Fiyat Aralığı",
+    "minPrice": "Min",
+    "maxPrice": "Max",
+    "categories": "Kategoriler",
+    "allCategories": "Tüm Kategoriler",
+    "sortBy": "Sırala",
+    "priceAsc": "Fiyat: Artan",
+    "priceDesc": "Fiyat: Azalan",
+    "noProducts": "Ürün bulunamadı",
+    "showingProducts": "{count} ürün gösteriliyor",
+    "applyFilters": "Filtreleri Uygula",
+    "clearFilters": "Filtreleri Temizle"
   }
 }

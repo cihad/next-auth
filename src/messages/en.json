@@ -4,7 +4,9 @@
     "signIn": "Sign in",
     "language": "Language",
     "turkish": "Türkçe",
-    "english": "English"
+    "english": "English",
+    "home": "Home",
+    "products": "Products"
   },
   "userMenu": {
     "signOut": "Sign out"
@@ -19,5 +21,21 @@
     "featuredProducts": "Featured Products",
     "addToCart": "Add to Cart",
     "addToCartTooltip": "Add to cart"
+  },
+  "productsPage": {
+    "title": "All Products",
+    "filters": "Filters",
+    "priceRange": "Price Range",
+    "minPrice": "Min",
+    "maxPrice": "Max",
+    "categories": "Categories",
+    "allCategories": "All Categories",
+    "sortBy": "Sort By",
+    "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low",
+    "noProducts": "No products found",
+    "showingProducts": "Showing {count} products",
+    "applyFilters": "Apply Filters",
+    "clearFilters": "Clear Filters"
   }
 }

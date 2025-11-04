@@ -30,7 +30,7 @@ export async function ProductCard({ product }: ProductCardProps) {
             variant="outline"
             tooltip={t("addToCartTooltip")}
           >
-            <ShoppingCartIcon />
+            <ShoppingCartIcon strokeWidth={1} />
           </AppButton>
         </div>
       </div>
