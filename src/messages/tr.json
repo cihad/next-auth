@@ -11,6 +11,9 @@
   "userMenu": {
     "signOut": "Çıkış Yap"
   },
+  "flash": {
+    "signOutSuccess": "Başarılı bir şekilde çıkış yaptınız."
+  },
   "loginPage": {
     "title": "Hesabınıza giriş yapın",
     "signInWithAuth0": "Auth0 ile giriş yap",

@@ -4,6 +4,9 @@ import { SessionProvider } from "next-auth/react";
 
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
+import { Toaster } from "@/components/ui/sonner";
+import FlashMessage from "@/components/app/flash-message";
+import { getFlash } from "@/lib/flash";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,18 +23,24 @@ export const metadata: Metadata = {
   description: "Next Auth demo application",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const flash = await getFlash();
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider>
-          <SessionProvider>{children}</SessionProvider>
+          <SessionProvider>
+            {children}
+            <Toaster position="top-center" />
+            <FlashMessage flash={flash} />
+          </SessionProvider>
         </NextIntlClientProvider>
       </body>
     </html>
