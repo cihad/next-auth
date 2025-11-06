@@ -278,7 +278,7 @@ describe("generateMetadata", () => {
       params: Promise.resolve({ id: "1" }),
     });
 
-    expect(metadata.title).toBe("Test Product | Next Auth Store");
+    expect(metadata.title).toBe("Test Product | FakeStore");
     expect(metadata.description).toBe("Test Description");
     expect(metadata.openGraph?.title).toBe("Test Product");
     expect(metadata.openGraph?.description).toBe("Test Description");

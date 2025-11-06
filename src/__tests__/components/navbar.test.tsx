@@ -74,7 +74,7 @@ describe("Navbar Component", () => {
     const NavbarComponent = await Navbar();
     render(NavbarComponent);
 
-    const homeLink = screen.getByRole("link", { name: /next auth/i });
+    const homeLink = screen.getByRole("link", { name: /fakestore/i });
     expect(homeLink).toBeInTheDocument();
     expect(homeLink).toHaveAttribute("href", "/");
   });

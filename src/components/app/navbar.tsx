@@ -6,6 +6,7 @@ import { NavbarMenu } from "./navbar-menu";
 import { CartPopover } from "./cart-popover";
 import { auth } from "@/lib/auth";
 import { getTranslations } from "next-intl/server";
+import NavbarLogo from "./navbar-logo";
 
 export async function Navbar() {
   const session = await auth();
@@ -17,7 +18,7 @@ export async function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-8">
             <Link href="/">
-              <h1 className="text-xl font-bold">{t("appTitle")}</h1>
+              <NavbarLogo />
             </Link>
             <NavbarMenu />
           </div>

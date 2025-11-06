@@ -1,24 +1,24 @@
 {
   "metadata": {
     "home": {
-      "title": "Next Auth",
+      "title": "FakeStore",
       "description": "Keyifle alışverişin tadını çıkarın ve harika fiyatlarla kaliteli ürünleri keşfedin."
     },
     "products": {
-      "title": "Tüm Ürünler - Next Auth",
+      "title": "Tüm Ürünler - FakeStore",
       "description": "Tüm ürün koleksiyonumuza göz atın."
     },
     "cart": {
-      "title": "Alışveriş Sepeti - Next Auth",
+      "title": "Alışveriş Sepeti - FakeStore",
       "description": "Alışveriş sepetinizi inceleyin ve ödemeye geçin."
     },
     "login": {
-      "title": "Giriş Yap - Next Auth",
+      "title": "Giriş Yap - FakeStore",
       "description": "Hesabınıza giriş yapın."
     }
   },
   "navbar": {
-    "appTitle": "Next Auth",
+    "appName": "FakeStore",
     "signIn": "Giriş Yap",
     "language": "Dil",
     "turkish": "Türkçe",
@@ -36,7 +36,7 @@
     "title": "Hesabınıza giriş yapın",
     "signInWithAuth0": "Auth0 ile giriş yap",
     "termsAgreement": "Devam ederek <termsLink>Hizmet Şartlarımızı</termsLink> ve <privacyLink>Gizlilik Politikamızı</privacyLink> kabul etmiş olursunuz",
-    "imageAlt": "Next Auth'a Hoş Geldiniz"
+    "imageAlt": "FakeStore'a Hoş Geldiniz"
   },
   "homePage": {
     "featuredProducts": "Öne Çıkan Ürünler",

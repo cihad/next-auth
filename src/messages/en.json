@@ -1,24 +1,24 @@
 {
   "metadata": {
     "home": {
-      "title": "Next Auth Store",
+      "title": "FakeStore",
       "description": "Enjoy shopping with pleasure and discover quality products at great prices."
     },
     "products": {
-      "title": "All Products - Next Auth Store",
+      "title": "All Products - FakeStore",
       "description": "Browse our complete collection of products."
     },
     "cart": {
-      "title": "Shopping Cart - Next Auth Store",
+      "title": "Shopping Cart - FakeStore",
       "description": "Review your shopping cart and proceed to checkout."
     },
     "login": {
-      "title": "Sign In - Next Auth Store",
+      "title": "Sign In - FakeStore",
       "description": "Sign in to your account."
     }
   },
   "navbar": {
-    "appTitle": "Next Auth",
+    "appName": "FakeStore",
     "signIn": "Sign in",
     "language": "Language",
     "turkish": "Türkçe",
@@ -36,7 +36,7 @@
     "title": "Sign in to your account",
     "signInWithAuth0": "Sign in with Auth0",
     "termsAgreement": "By continuing, you agree to our <termsLink>Terms of Service</termsLink> and <privacyLink>Privacy Policy</privacyLink>",
-    "imageAlt": "Welcome to Next Auth"
+    "imageAlt": "Welcome to FakeStore"
   },
   "homePage": {
     "featuredProducts": "Featured Products",

@@ -58,7 +58,7 @@ describe("Login Page", () => {
     const LoginPageComponent = await LoginPage();
     render(LoginPageComponent);
 
-    const image = screen.getByAltText("Welcome to Next Auth");
+    const image = screen.getByAltText("Welcome to FakeStore");
     expect(image).toBeInTheDocument();
   });
 

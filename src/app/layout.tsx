@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next Auth",
-  description: "Next Auth demo application",
+  title: "Fake Stora",
+  description: "FakeStore demo application",
 };
 
 export default async function RootLayout({

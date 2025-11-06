@@ -71,7 +71,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${product.title} | Next Auth Store`,
+    title: `${product.title} | FakeStore`,
     description: product.description,
     openGraph: {
       title: product.title,
