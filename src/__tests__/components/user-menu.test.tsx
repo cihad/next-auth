@@ -1,4 +1,5 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import UserMenu from "@/components/app/user-menu";
 
 // Mock next/link
@@ -24,6 +25,10 @@ describe("UserMenu Component", () => {
     image: "https://example.com/avatar.jpg",
   };
 
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("should render user avatar fallback", () => {
     render(<UserMenu user={mockUser} />);
 
@@ -37,6 +42,30 @@ describe("UserMenu Component", () => {
     // Dropdown trigger button
     const button = screen.getByRole("button", { name: /J/i });
     expect(button).toBeInTheDocument();
+  });
+
+  it("should show user email in dropdown menu", async () => {
+    const user = userEvent.setup();
+    render(<UserMenu user={mockUser} />);
+
+    const button = screen.getByRole("button");
+    await user.click(button);
+
+    await waitFor(() => {
+      expect(screen.getByText("john@example.com")).toBeInTheDocument();
+    });
+  });
+
+  it("should show sign out button with translated text", async () => {
+    const user = userEvent.setup();
+    render(<UserMenu user={mockUser} />);
+
+    const button = screen.getByRole("button");
+    await user.click(button);
+
+    await waitFor(() => {
+      expect(screen.getByText("Sign out")).toBeInTheDocument();
+    });
   });
 
   it("should handle missing user image gracefully", () => {

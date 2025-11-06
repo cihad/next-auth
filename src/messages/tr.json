@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "home": {
+      "title": "FakeStore",
+      "description": "Keyifle alışverişin tadını çıkarın ve harika fiyatlarla kaliteli ürünleri keşfedin."
+    },
+    "products": {
+      "title": "Tüm Ürünler - FakeStore",
+      "description": "Tüm ürün koleksiyonumuza göz atın."
+    },
+    "cart": {
+      "title": "Alışveriş Sepeti - FakeStore",
+      "description": "Alışveriş sepetinizi inceleyin ve ödemeye geçin."
+    },
+    "login": {
+      "title": "Giriş Yap - FakeStore",
+      "description": "Hesabınıza giriş yapın."
+    }
+  },
+  "navbar": {
+    "appName": "FakeStore",
+    "signIn": "Giriş Yap",
+    "language": "Dil",
+    "turkish": "Türkçe",
+    "english": "English",
+    "home": "Anasayfa",
+    "products": "Ürünler"
+  },
+  "userMenu": {
+    "signOut": "Çıkış Yap"
+  },
+  "flash": {
+    "signOutSuccess": "Başarılı bir şekilde çıkış yaptınız."
+  },
+  "loginPage": {
+    "title": "Hesabınıza giriş yapın",
+    "signInWithAuth0": "Auth0 ile giriş yap",
+    "termsAgreement": "Devam ederek <termsLink>Hizmet Şartlarımızı</termsLink> ve <privacyLink>Gizlilik Politikamızı</privacyLink> kabul etmiş olursunuz",
+    "imageAlt": "FakeStore'a Hoş Geldiniz"
+  },
+  "homePage": {
+    "featuredProducts": "Öne Çıkan Ürünler",
+    "addToCart": "Sepete Ekle",
+    "addToCartTooltip": "Sepete ekle",
+    "addedToCart": "Ürün sepete eklendi"
+  },
+  "productsPage": {
+    "title": "Tüm Ürünler",
+    "filters": "Filtreler",
+    "priceRange": "Fiyat Aralığı",
+    "minPrice": "Min",
+    "maxPrice": "Max",
+    "categories": "Kategoriler",
+    "allCategories": "Tüm Kategoriler",
+    "sortBy": "Sırala",
+    "priceAsc": "Fiyat: Artan",
+    "priceDesc": "Fiyat: Azalan",
+    "noProducts": "Ürün bulunamadı",
+    "showingProducts": "{count} ürün gösteriliyor",
+    "applyFilters": "Filtreleri Uygula",
+    "clearFilters": "Filtreleri Temizle"
+  },
+  "productDetailPage": {
+    "price": "Fiyat",
+    "category": "Kategori",
+    "description": "Açıklama",
+    "addToCart": "Sepete Ekle",
+    "backToProducts": "Ürünlere Dön",
+    "productNotFound": "Ürün bulunamadı",
+    "reviews": "değerlendirme",
+    "addedToCart": "Ürün sepete eklendi"
+  },
+  "cart": {
+    "title": "Alışveriş Sepeti",
+    "emptyCart": "Sepetiniz boş",
+    "total": "Toplam",
+    "viewCart": "Sepeti Görüntüle"
+  },
+  "cartPage": {
+    "title": "Alışveriş Sepeti",
+    "emptyCart": "Sepetiniz boş",
+    "emptyCartDescription": "Henüz sepetinize ürün eklemediniz.",
+    "continueShopping": "Alışverişe Devam Et",
+    "orderSummary": "Sipariş Özeti",
+    "items": "{count, plural, =1 {Ürün} other {Ürün}}",
+    "subtotal": "Ara Toplam",
+    "total": "Toplam",
+    "checkout": "Ödemeye Geç",
+    "remove": "Kaldır",
+    "checkoutNotImplemented": "Ödeme özelliği henüz implemente edilmedi."
+  }
+}
