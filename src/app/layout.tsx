@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { Toaster } from "@/components/ui/sonner";
 import FlashMessage from "@/components/app/flash-message";
 import { getFlash } from "@/lib/flash";
+import StoreProvider from "@/lib/store-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,13 +36,15 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider>
-          <SessionProvider>
-            {children}
-            <Toaster position="top-center" />
-            <FlashMessage flash={flash} />
-          </SessionProvider>
-        </NextIntlClientProvider>
+        <StoreProvider>
+          <NextIntlClientProvider>
+            <SessionProvider>
+              {children}
+              <Toaster position="top-center" />
+              <FlashMessage flash={flash} />
+            </SessionProvider>
+          </NextIntlClientProvider>
+        </StoreProvider>
       </body>
     </html>
   );

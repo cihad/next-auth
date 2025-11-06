@@ -30,7 +30,7 @@ export async function ProductList({
       <MobileFiltersProvider>
         {/* Mobile: Title and Filter Button */}
         <div className="flex justify-between items-center mb-4 lg:mb-8">
-          <PageTitle>{t("title")}</PageTitle>
+          <PageTitle className="mb-0">{t("title")}</PageTitle>
           <div className="lg:hidden">
             <MobileFiltersTrigger />
           </div>

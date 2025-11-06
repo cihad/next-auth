@@ -23,7 +23,8 @@
   "homePage": {
     "featuredProducts": "Öne Çıkan Ürünler",
     "addToCart": "Sepete Ekle",
-    "addToCartTooltip": "Sepete ekle"
+    "addToCartTooltip": "Sepete ekle",
+    "addedToCart": "Ürün sepete eklendi"
   },
   "productsPage": {
     "title": "Tüm Ürünler",
@@ -48,6 +49,26 @@
     "addToCart": "Sepete Ekle",
     "backToProducts": "Ürünlere Dön",
     "productNotFound": "Ürün bulunamadı",
-    "reviews": "değerlendirme"
+    "reviews": "değerlendirme",
+    "addedToCart": "Ürün sepete eklendi"
+  },
+  "cart": {
+    "title": "Alışveriş Sepeti",
+    "emptyCart": "Sepetiniz boş",
+    "total": "Toplam",
+    "viewCart": "Sepeti Görüntüle"
+  },
+  "cartPage": {
+    "title": "Alışveriş Sepeti",
+    "emptyCart": "Sepetiniz boş",
+    "emptyCartDescription": "Henüz sepetinize ürün eklemediniz.",
+    "continueShopping": "Alışverişe Devam Et",
+    "orderSummary": "Sipariş Özeti",
+    "items": "{count, plural, =1 {Ürün} other {Ürün}}",
+    "subtotal": "Ara Toplam",
+    "total": "Toplam",
+    "checkout": "Ödemeye Geç",
+    "remove": "Kaldır",
+    "checkoutNotImplemented": "Ödeme özelliği henüz implemente edilmedi."
   }
 }

@@ -1,14 +1,14 @@
 import { Navbar } from "@/components/app/navbar";
 import { Product } from "@/types/product";
-import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ShoppingCartIcon, ArrowLeftIcon } from "lucide-react";
-import AppButton from "@/components/app/app-button";
+import type { Metadata } from "next";
+import { AddToCartButton } from "@/components/app/add-to-cart-button";
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowLeftIcon } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import { Rating } from "@/components/ui/rating";
-import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 async function getProduct(id: string): Promise<Product | null> {
   try {
@@ -93,8 +93,8 @@ export default async function ProductDetailPage({
   params,
 }: ProductDetailPageProps) {
   const { id } = await params;
-  const t = await getTranslations("productDetailPage");
   const product = await getProduct(id);
+  const t = await getTranslations("productDetailPage");
 
   if (!product) {
     notFound();
@@ -151,10 +151,7 @@ export default async function ProductDetailPage({
               </p>
             </div>
 
-            <AppButton size="lg" className="w-full">
-              <ShoppingCartIcon className="mr-2" />
-              {t("addToCart")}
-            </AppButton>
+            <AddToCartButton product={product} />
 
             <div>
               <h2 className="text-lg font-semibold mb-3">{t("description")}</h2>

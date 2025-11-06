@@ -3,6 +3,7 @@ import Link from "next/link";
 import UserMenu from "./user-menu";
 import LanguageSwitcher from "./language-switcher";
 import { NavbarMenu } from "./navbar-menu";
+import { CartPopover } from "./cart-popover";
 import { auth } from "@/lib/auth";
 import { getTranslations } from "next-intl/server";
 
@@ -23,6 +24,7 @@ export async function Navbar() {
 
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
+            <CartPopover />
             {session ? (
               <UserMenu user={session.user} />
             ) : (
