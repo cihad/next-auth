@@ -23,7 +23,8 @@
   "homePage": {
     "featuredProducts": "Featured Products",
     "addToCart": "Add to Cart",
-    "addToCartTooltip": "Add to cart"
+    "addToCartTooltip": "Add to cart",
+    "addedToCart": "Product added to cart"
   },
   "productsPage": {
     "title": "All Products",
@@ -48,6 +49,26 @@
     "addToCart": "Add to Cart",
     "backToProducts": "Back to Products",
     "productNotFound": "Product not found",
-    "reviews": "reviews"
+    "reviews": "reviews",
+    "addedToCart": "Product added to cart"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "emptyCart": "Your cart is empty",
+    "total": "Total",
+    "viewCart": "View Cart"
+  },
+  "cartPage": {
+    "title": "Shopping Cart",
+    "emptyCart": "Your cart is empty",
+    "emptyCartDescription": "Looks like you haven't added any items to your cart yet.",
+    "continueShopping": "Continue Shopping",
+    "orderSummary": "Order Summary",
+    "items": "{count, plural, =1 {Item} other {Items}}",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "checkoutNotImplemented": "Checkout feature is not implemented yet."
   }
 }

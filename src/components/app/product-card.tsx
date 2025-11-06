@@ -1,17 +1,29 @@
+"use client";
+
 import Image from "next/image";
 import { Product } from "@/types/product";
 import { ShoppingCartIcon } from "lucide-react";
-import AppButton from "./app-button";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { formatPrice } from "@/lib/utils";
+import { useAppDispatch } from "@/lib/hooks";
+import { addItem } from "@/lib/features/cart/cart-slice";
+import { toast } from "sonner";
+import AppButton from "./app-button";
 
 interface ProductCardProps {
   product: Product;
 }
 
-export async function ProductCard({ product }: ProductCardProps) {
-  const t = await getTranslations("homePage");
+export function ProductCard({ product }: ProductCardProps) {
+  const t = useTranslations("homePage");
+  const dispatch = useAppDispatch();
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
+    dispatch(addItem(product));
+    toast.success(t("addedToCart"));
+  };
 
   return (
     <Link
@@ -35,6 +47,7 @@ export async function ProductCard({ product }: ProductCardProps) {
           <AppButton
             size="icon"
             variant="outline"
+            onClick={handleAddToCart}
             tooltip={t("addToCartTooltip")}
           >
             <ShoppingCartIcon strokeWidth={1} />
