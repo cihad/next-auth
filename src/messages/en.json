@@ -29,6 +29,19 @@
   "userMenu": {
     "signOut": "Sign out"
   },
+  "footer": {
+    "about": "About",
+    "aboutDescription": "Discover quality products at great prices. Your satisfaction is our priority.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "products": "Products",
+    "cart": "Shopping Cart",
+    "contact": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "appName": "FakeStore",
+    "allRightsReserved": "All rights reserved."
+  },
   "flash": {
     "signOutSuccess": "You have successfully signed out."
   },

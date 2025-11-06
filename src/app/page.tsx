@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/app/navbar";
+import { Footer } from "@/components/app/footer";
 import { PageTitle } from "@/components/app/page-title";
 import { ProductCard } from "@/components/app/product-card";
 import { Product } from "@/types/product";
@@ -38,7 +39,7 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 min-h-[calc(100vh-4rem)]">
         {products.length > 0 && (
           <section>
             <PageTitle>{t("featuredProducts")}</PageTitle>
@@ -50,6 +51,7 @@ export default async function Home() {
           </section>
         )}
       </main>
+      <Footer />
     </>
   );
 }

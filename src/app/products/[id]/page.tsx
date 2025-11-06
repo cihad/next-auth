@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/app/navbar";
+import { Footer } from "@/components/app/footer";
 import { Product } from "@/types/product";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -160,6 +161,7 @@ export default async function ProductDetailPage({
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
