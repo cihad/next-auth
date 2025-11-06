@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/app/navbar";
+import { Footer } from "@/components/app/footer";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
@@ -20,6 +21,7 @@ export default function CartLayout({
     <>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 }

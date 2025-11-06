@@ -29,6 +29,19 @@
   "userMenu": {
     "signOut": "Çıkış Yap"
   },
+  "footer": {
+    "about": "Hakkında",
+    "aboutDescription": "Harika fiyatlarla kaliteli ürünleri keşfedin. Memnuniyetiniz bizim önceliğimizdir.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "home": "Anasayfa",
+    "products": "Ürünler",
+    "cart": "Alışveriş Sepeti",
+    "contact": "İletişim",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "appName": "FakeStore",
+    "allRightsReserved": "Tüm hakları saklıdır."
+  },
   "flash": {
     "signOutSuccess": "Başarılı bir şekilde çıkış yaptınız."
   },

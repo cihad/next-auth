@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/app/navbar";
+import { Footer } from "@/components/app/footer";
 import { Product } from "@/types/product";
 import { ProductList } from "@/components/app/product-list";
 import type { Metadata } from "next";
@@ -109,6 +110,7 @@ export default async function ProductsPage({
         selectedCategories={selectedCategories}
         sortBy={sortBy}
       />
+      <Footer />
     </>
   );
 }
