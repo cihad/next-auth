@@ -1,4 +1,22 @@
 {
+  "metadata": {
+    "home": {
+      "title": "Next Auth",
+      "description": "Keyifle alışverişin tadını çıkarın ve harika fiyatlarla kaliteli ürünleri keşfedin."
+    },
+    "products": {
+      "title": "Tüm Ürünler - Next Auth",
+      "description": "Tüm ürün koleksiyonumuza göz atın."
+    },
+    "cart": {
+      "title": "Alışveriş Sepeti - Next Auth",
+      "description": "Alışveriş sepetinizi inceleyin ve ödemeye geçin."
+    },
+    "login": {
+      "title": "Giriş Yap - Next Auth",
+      "description": "Hesabınıza giriş yapın."
+    }
+  },
   "navbar": {
     "appTitle": "Next Auth",
     "signIn": "Giriş Yap",

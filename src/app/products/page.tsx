@@ -1,6 +1,17 @@
 import { Navbar } from "@/components/app/navbar";
 import { Product } from "@/types/product";
 import { ProductList } from "@/components/app/product-list";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata.products");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 async function getAllProducts(): Promise<Product[]> {
   try {

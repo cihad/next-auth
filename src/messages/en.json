@@ -1,4 +1,22 @@
 {
+  "metadata": {
+    "home": {
+      "title": "Next Auth Store",
+      "description": "Enjoy shopping with pleasure and discover quality products at great prices."
+    },
+    "products": {
+      "title": "All Products - Next Auth Store",
+      "description": "Browse our complete collection of products."
+    },
+    "cart": {
+      "title": "Shopping Cart - Next Auth Store",
+      "description": "Review your shopping cart and proceed to checkout."
+    },
+    "login": {
+      "title": "Sign In - Next Auth Store",
+      "description": "Sign in to your account."
+    }
+  },
   "navbar": {
     "appTitle": "Next Auth",
     "signIn": "Sign in",

@@ -4,6 +4,16 @@ import Image from "next/image";
 import Auth0Logo from "@/components/app/auth0-logo";
 import { signIn } from "@/lib/auth";
 import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata.login");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default async function LoginPage() {
   const t = await getTranslations("loginPage");

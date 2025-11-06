@@ -48,7 +48,6 @@ import { formatPrice } from "@/lib/utils";
 import { format } from "path";
 import { PageTitle } from "@/components/app/page-title";
 import AppButton from "@/components/app/app-button";
-import Component from "@/components/comp-29";
 import {
   InputGroup,
   InputGroupAddon,

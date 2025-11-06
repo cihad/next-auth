@@ -3,6 +3,16 @@ import { PageTitle } from "@/components/app/page-title";
 import { ProductCard } from "@/components/app/product-card";
 import { Product } from "@/types/product";
 import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata.home");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 async function getFeaturedProducts(): Promise<Product[]> {
   try {
