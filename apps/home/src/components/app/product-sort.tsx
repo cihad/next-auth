@@ -8,7 +8,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@fakestore/shadcn/components/select";
 
 interface ProductSortProps {
   value: string;

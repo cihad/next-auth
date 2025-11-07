@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@fakestore/shadcn/components/skeleton";
 
 export function ProductCardSkeleton() {
   return (

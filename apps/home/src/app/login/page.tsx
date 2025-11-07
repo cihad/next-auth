@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@fakestore/shadcn/components/button";
 import Link from "next/link";
 import Image from "next/image";
 import Auth0Logo from "@/components/app/auth0-logo";
-import { signIn } from "@/lib/auth";
+import { signIn } from "@fakestore/shared/lib/auth";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 

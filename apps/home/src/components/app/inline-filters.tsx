@@ -1,18 +1,18 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Button } from "@/components/ui/button";
+import { Input } from "@fakestore/shadcn/components/input";
+import { Label } from "@fakestore/shadcn/components/label";
+import { Checkbox } from "@fakestore/shadcn/components/checkbox";
+import { Button } from "@fakestore/shadcn/components/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@fakestore/shadcn/components/popover";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ChevronDown, Filter } from "lucide-react";
-import { ButtonGroup } from "../ui/button-group";
+import { ButtonGroup } from "@fakestore/shadcn/components/button-group";
 
 interface InlineFiltersProps {
   categories: string[];

@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import UserMenu from "@/components/app/user-menu";
+import UserMenu from "@fakestore/shared/components/user-menu";
 
 // Mock next/link
 jest.mock("next/link", () => {

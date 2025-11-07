@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@fakestore/shadcn/components/button";
 import { ShoppingCartIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useAppDispatch } from "@/lib/hooks";
-import { addItem } from "@/lib/features/cart/cart-slice";
+import { useAppDispatch } from "@fakestore/shared/store/hooks";
+import { addItem } from "@fakestore/shared/store/cart-slice";
 import { toast } from "sonner";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 
 interface AddToCartButtonProps {
   product: Product;

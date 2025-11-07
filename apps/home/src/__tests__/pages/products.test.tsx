@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import ProductsPage from "@/app/products/page";
 import { NextIntlClientProvider } from "next-intl";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 
 // Mock the child components
-jest.mock("@/components/app/navbar", () => ({
+jest.mock("@fakestore/shared/components/navbar", () => ({
   Navbar: () => <div data-testid="navbar">Navbar</div>,
 }));
 

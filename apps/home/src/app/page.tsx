@@ -1,8 +1,8 @@
-import { Navbar } from "@/components/app/navbar";
+import { Navbar } from "@fakestore/shared/components/navbar";
 import { Footer } from "@/components/app/footer";
-import { PageTitle } from "@/components/app/page-title";
+import { PageTitle } from "@fakestore/shared/components/page-title";
 import { ProductCard } from "@/components/app/product-card";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 

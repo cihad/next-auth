@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/app/navbar";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Navbar } from "@fakestore/shared/components/navbar";
+import { Skeleton } from "@fakestore/shadcn/components/skeleton";
 import { ArrowLeftIcon } from "lucide-react";
 
 export default function ProductDetailLoading() {

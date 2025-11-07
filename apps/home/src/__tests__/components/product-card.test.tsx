@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { ProductCard } from "@/components/app/product-card";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 
 // Mock AppButton component
-jest.mock("@/components/app/app-button", () => {
+jest.mock("@fakestore/shared/components/app-button", () => {
   const MockAppButton = ({
     children,
     tooltip,

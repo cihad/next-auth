@@ -1,6 +1,6 @@
-import { Navbar } from "@/components/app/navbar";
+import { Navbar } from "@fakestore/shared/components/navbar";
 import { Footer } from "@/components/app/footer";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 import { ProductList } from "@/components/app/product-list";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";

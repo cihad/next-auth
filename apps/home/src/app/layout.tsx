@@ -4,10 +4,10 @@ import { SessionProvider } from "next-auth/react";
 
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { Toaster } from "@/components/ui/sonner";
-import FlashMessage from "@/components/app/flash-message";
-import { getFlash } from "@/lib/flash";
-import StoreProvider from "@/lib/store-provider";
+import { Toaster } from "@fakestore/shadcn/components/sonner";
+import FlashMessage from "@fakestore/shared/components/flash-message";
+import { getFlash } from "@fakestore/shared/lib/flash";
+import StoreProvider from "@fakestore/shared/components/store-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

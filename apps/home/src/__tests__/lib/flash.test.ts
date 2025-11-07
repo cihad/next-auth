@@ -1,4 +1,4 @@
-import { setFlash, getFlash, clearFlash } from "@/lib/flash";
+import { setFlash, getFlash, clearFlash } from "@fakestore/shared/lib/flash";
 import { cookies } from "next/headers";
 
 // Mock next/headers

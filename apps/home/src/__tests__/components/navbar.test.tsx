@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { Navbar } from "@/components/app/navbar";
-import { auth } from "@/lib/auth";
+import { Navbar } from "@fakestore/shared/components/navbar";
+import { auth } from "@fakestore/shared/lib/auth";
 
-jest.mock("@/lib/auth", () => ({
+jest.mock("@fakestore/shared/lib/auth", () => ({
   auth: jest.fn(),
 }));
 

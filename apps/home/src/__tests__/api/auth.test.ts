@@ -1,4 +1,4 @@
-jest.mock("@/lib/auth");
+jest.mock("@fakestore/shared/lib/auth");
 
 describe("NextAuth Configuration", () => {
   beforeEach(() => {

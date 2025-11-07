@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import LanguageSwitcher from "@/components/app/language-switcher";
+import LanguageSwitcher from "@fakestore/shared/components/language-switcher";
 import { useRouter } from "next/navigation";
 
 // Mock next/navigation

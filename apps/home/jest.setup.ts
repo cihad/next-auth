@@ -1,9 +1,9 @@
 import "@testing-library/jest-dom";
-import enMessages from "@/messages/en.json";
-import trMessages from "@/messages/tr.json";
+import enMessages from "@fakestore/shared/messages/en.json";
+import trMessages from "@fakestore/shared/messages/tr.json";
 
 // Mock next-auth module
-jest.mock("@/lib/auth", () => ({
+jest.mock("@fakestore/shared/lib/auth", () => ({
   auth: jest.fn(),
   signIn: jest.fn(),
   signOut: jest.fn(),

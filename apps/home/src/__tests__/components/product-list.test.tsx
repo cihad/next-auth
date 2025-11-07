@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { ProductList } from "@/components/app/product-list";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 
 // Mock child components
-jest.mock("@/components/app/page-title", () => ({
+jest.mock("@fakestore/shared/components/page-title", () => ({
   PageTitle: ({ children }: { children: React.ReactNode }) => (
     <h2>{children}</h2>
   ),
@@ -17,7 +17,7 @@ jest.mock("@/components/app/product-sort", () => ({
   ProductSort: () => <div data-testid="product-sort">Product Sort</div>,
 }));
 
-jest.mock("@/components/app/product-card", () => ({
+jest.mock("@fakestore/shared/components/product-card", () => ({
   ProductCard: ({ product }: { product: Product }) => (
     <div data-testid={`product-${product.id}`}>{product.title}</div>
   ),

@@ -4,7 +4,7 @@ import ProductDetailPage, {
   generateMetadata,
 } from "@/app/products/[id]/page";
 import { NextIntlClientProvider } from "next-intl";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 
 jest.mock("next/navigation", () => ({
   notFound: jest.fn(),
@@ -22,11 +22,11 @@ jest.mock("next/link", () => ({
 }));
 
 // Mock the child components
-jest.mock("@/components/app/navbar", () => ({
+jest.mock("@fakestore/shared/components/navbar", () => ({
   Navbar: () => <div data-testid="navbar">Navbar</div>,
 }));
 
-jest.mock("@/components/app/app-button", () => ({
+jest.mock("@fakestore/shared/components/app-button", () => ({
   __esModule: true,
   default: ({
     children,
@@ -41,7 +41,7 @@ jest.mock("@/components/app/app-button", () => ({
   ),
 }));
 
-jest.mock("@/components/ui/rating", () => ({
+jest.mock("@fakestore/shadcn/components/rating", () => ({
   Rating: ({ rating, showValue }: { rating: number; showValue?: boolean }) => (
     <div data-testid="rating">
       {showValue && <span>{rating.toFixed(1)}</span>}

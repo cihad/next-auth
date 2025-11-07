@@ -2,12 +2,12 @@ import { render, screen } from "@testing-library/react";
 import Home from "@/app/page";
 
 // Mock Navbar
-jest.mock("@/components/app/navbar", () => ({
+jest.mock("@fakestore/shared/components/navbar", () => ({
   Navbar: () => <nav data-testid="navbar">Navbar</nav>,
 }));
 
 // Mock ProductCard
-jest.mock("@/components/app/product-card", () => ({
+jest.mock("@fakestore/shared/components/product-card", () => ({
   ProductCard: ({ product }: { product: { id: number; title: string } }) => (
     <div data-testid={`product-${product.id}`}>{product.title}</div>
   ),

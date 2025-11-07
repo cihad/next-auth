@@ -1,8 +1,8 @@
 import { render, waitFor } from "@testing-library/react";
 import { toast } from "sonner";
-import FlashMessage from "@/components/app/flash-message";
-import { clearFlash } from "@/lib/flash";
-import type { FlashMessage as FlashMessageType } from "@/lib/flash";
+import FlashMessage from "@fakestore/shared/components/flash-message";
+import { clearFlash } from "@fakestore/shared/lib/flash";
+import type { FlashMessage as FlashMessageType } from "@fakestore/shared/lib/flash";
 
 // Mock sonner
 jest.mock("sonner", () => ({
@@ -15,7 +15,7 @@ jest.mock("sonner", () => ({
 }));
 
 // Mock flash.ts
-jest.mock("@/lib/flash", () => ({
+jest.mock("@fakestore/shared/lib/flash", () => ({
   clearFlash: jest.fn(),
 }));
 

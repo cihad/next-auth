@@ -1,4 +1,4 @@
-import { cn, formatPrice } from "@/lib/utils";
+import { cn, formatPrice } from "@fakestore/shared/lib/utils";
 
 describe("cn", () => {
   it("should merge class names correctly", () => {

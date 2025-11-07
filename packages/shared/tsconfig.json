@@ -1,0 +1,21 @@
+{
+  "extends": "@fakestore/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

@@ -2,18 +2,18 @@
 
 import { createContext, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Button } from "@/components/ui/button";
+import { Input } from "@fakestore/shadcn/components/input";
+import { Label } from "@fakestore/shadcn/components/label";
+import { Checkbox } from "@fakestore/shadcn/components/checkbox";
+import { Button } from "@fakestore/shadcn/components/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "@fakestore/shadcn/components/collapsible";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Filter } from "lucide-react";
-import { ButtonGroup } from "../ui/button-group";
+import { ButtonGroup } from "@fakestore/shadcn/components/button-group";
 import { ProductSort } from "./product-sort";
 
 interface MobileFiltersProps {

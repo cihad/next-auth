@@ -1,14 +1,14 @@
-import { Navbar } from "@/components/app/navbar";
+import { Navbar } from "@fakestore/shared/components/navbar";
 import { Footer } from "@/components/app/footer";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { AddToCartButton } from "@/components/app/add-to-cart-button";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeftIcon } from "lucide-react";
-import { formatPrice } from "@/lib/utils";
-import { Rating } from "@/components/ui/rating";
+import { formatPrice } from "@fakestore/shared/lib/utils";
+import { Rating } from "@fakestore/shadcn/components/rating";
 import { getTranslations } from "next-intl/server";
 
 async function getProduct(id: string): Promise<Product | null> {

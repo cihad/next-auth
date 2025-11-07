@@ -1,6 +1,6 @@
-import { Navbar } from "@/components/app/navbar";
+import { Navbar } from "@fakestore/shared/components/navbar";
 import { ProductCardSkeleton } from "@/components/app/product-card-skeleton";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@fakestore/shadcn/components/skeleton";
 
 export default function ProductsLoading() {
   return (

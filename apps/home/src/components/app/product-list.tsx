@@ -1,9 +1,9 @@
 import { getTranslations } from "next-intl/server";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 import { InlineFilters } from "@/components/app/inline-filters";
 import { ProductSort } from "@/components/app/product-sort";
 import { ProductCard } from "@/components/app/product-card";
-import { PageTitle } from "./page-title";
+import { PageTitle } from "@fakestore/shared/components/page-title";
 import {
   MobileFiltersProvider,
   MobileFiltersTrigger,

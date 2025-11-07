@@ -1,15 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { Product } from "@/types/product";
+import { Product } from "@fakestore/shared/types/product";
 import { ShoppingCartIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { formatPrice } from "@/lib/utils";
-import { useAppDispatch } from "@/lib/hooks";
-import { addItem } from "@/lib/features/cart/cart-slice";
+import { formatPrice } from "@fakestore/shared/lib/utils";
+import { useAppDispatch } from "@fakestore/shared/store/hooks";
+import { addItem } from "@fakestore/shared/store/cart-slice";
 import { toast } from "sonner";
-import AppButton from "./app-button";
+import AppButton from "@fakestore/shared/components/app-button";
 
 interface ProductCardProps {
   product: Product;

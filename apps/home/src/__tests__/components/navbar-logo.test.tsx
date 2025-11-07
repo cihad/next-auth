@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import NavbarLogo from "@/components/app/navbar-logo";
+import NavbarLogo from "@fakestore/shared/components/navbar-logo";
 
 // Mock next-intl/server
 jest.mock("next-intl/server", () => ({

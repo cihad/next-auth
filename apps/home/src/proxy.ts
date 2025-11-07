@@ -1,1 +1,1 @@
-export { auth as default } from "@/lib/auth";
+export { auth as default } from "@fakestore/shared/lib/auth";
