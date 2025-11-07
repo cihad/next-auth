@@ -2,12 +2,14 @@
   "$schema": "https://turborepo.com/microfrontends/schema.json",
   "applications": {
     "@fakestore/home": {
+      "packageName": "@fakestore/home",
       "development": {
         "local": 3000,
         "fallback": "microfrontends-marketing.labs.vercel.dev"
       }
     },
     "@fakestore/cart": {
+      "packageName": "@fakestore/cart",
       "development": {
         "local": 3001
       },
