@@ -1,0 +1,40 @@
+{
+  "name": "@fakestore/shared",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.10.1",
+    "lucide-react": "^0.475.0",
+    "next": "16.0.1",
+    "next-auth": "5.0.0-beta.30",
+    "next-intl": "^4.4.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-redux": "^9.2.0"
+  },
+  "devDependencies": {
+    "@fakestore/eslint-config": "workspace:*",
+    "@fakestore/shadcn": "workspace:*",
+    "@fakestore/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@turbo/gen": "^2.5.5",
+    "@types/node": "^20.19.9",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.9.2"
+  },
+  "exports": {
+    "./globals.css": "./src/styles/globals.css",
+    "./lib/*": "./src/lib/*.ts",
+    "./components/*": "./src/components/*.tsx",
+    "./hooks/*": "./src/hooks/*.ts",
+    "./store/*": "./src/store/*.ts",
+    "./types/*": "./src/types/*.ts",
+    "./messages/*": "./src/messages/*"
+  }
+}
