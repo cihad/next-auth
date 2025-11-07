@@ -1,4 +1,4 @@
-import { cn } from "@fakestore/shared/lib/utils";
+import { cn } from "@fakestore/shadcn/lib/utils";
 import { ComponentProps } from "react";
 
 export function PageTitle({ className, ...props }: ComponentProps<"h2">) {
