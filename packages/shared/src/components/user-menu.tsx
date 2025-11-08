@@ -19,7 +19,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 interface UserMenuProps {
-  user: Session["user"];
+  user?: Session["user"];
 }
 
 export default function UserMenu({ user }: UserMenuProps) {
@@ -37,15 +37,15 @@ export default function UserMenu({ user }: UserMenuProps) {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="relative h-10 w-10 rounded-full">
           <Avatar>
-            <AvatarImage src={user?.image || ""} alt={user.email || "User"} />
+            <AvatarImage src={user?.image || ""} alt={user?.email || "User"} />
             <AvatarFallback>
-              {user.email?.charAt(0).toUpperCase() || "U"}
+              {user?.email?.charAt(0).toUpperCase() || "U"}
             </AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="end">
-        <DropdownMenuLabel>{user.email}</DropdownMenuLabel>
+        <DropdownMenuLabel>{user?.email}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <form action={handleSignOut}>
           <DropdownMenuItem asChild>
